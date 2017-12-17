@@ -1,5 +1,4 @@
-
-
+﻿
 public class GraphDijkstra {
 	private final static int MAXVEX = 9;
 	private final static int MAXWEIGHT = 65535;

@@ -1,15 +1,14 @@
-
-
+ï»¿
 import java.util.LinkedList;
 
 public class Graph {
 
-	private int vertexSize;  // ¶¥µãÊıÁ¿
-	private int[] vertexs;  // ¶¥µãÊı×é
-	private int[][] matrix;  // ¾ØÕó
-	private static final int MAX_WEIGHT = 1000;  // ÓÃ1000´úÌæ¡Ş
+	private int vertexSize;  // é¡¶ç‚¹æ•°é‡
+	private int[] vertexs;  // é¡¶ç‚¹æ•°ç»„
+	private int[][] matrix;  // çŸ©é˜µ
+	private static final int MAX_WEIGHT = 1000;  // ç”¨1000ä»£æ›¿âˆ
 	private boolean[] isVisited;
-	// ¹¹Ôìº¯Êı
+	// æ„é€ å‡½æ•°
 	public Graph(int vertexSize) {
 		this.vertexSize = vertexSize;
 		matrix = new int[vertexSize][vertexSize];
@@ -45,7 +44,7 @@ public class Graph {
 	}
 	
 	/**
-	 * »ñÈ¡³ö¶È
+	 * è·å–å‡ºåº¦
 	 * @param index
 	 */
 	public int getOutDegree(int index) {
@@ -59,7 +58,7 @@ public class Graph {
 		return degree;
 	}
 	/**
-	 * »ñÈ¡¶ş¸ö¶¥µãÖ®¼äµÄÈ¨Öµ
+	 * è·å–äºŒä¸ªé¡¶ç‚¹ä¹‹é—´çš„æƒå€¼
 	 */
 	public int getWeight(int v1, int v2) {
 		int weight = matrix[v1][v2];
@@ -67,7 +66,7 @@ public class Graph {
 	}
 	
 	/**
-	 * »ñÈ¡Ä³¸ö¶¥µãµÄµÚÒ»¸öÁÚ½Óµã
+	 * è·å–æŸä¸ªé¡¶ç‚¹çš„ç¬¬ä¸€ä¸ªé‚»æ¥ç‚¹
 	 */
 	public int getFirstNeighbor(int index) {
 		for(int j = 0; j < vertexSize; j++) {
@@ -79,9 +78,9 @@ public class Graph {
 	}
 	
 	/**
-	 * ¸ù¾İÇ°Ò»¸öÁÚ½ÓµãµÄÏÂ±êÀ´È¡µÃÏÂÒ»¸öÁÚ½Óµã
-	 * @param v ±íÊ¾ÒªÕÒµÄ¶¥µã
-	 * @param index ±íÊ¾¸Ã¶¥µã¶ÔÓÚÄÄ¸öÁÚ½ÓµãÈ¥»ñÈ¡ÏÂÒ»¸öÁÚ½Óµã
+	 * æ ¹æ®å‰ä¸€ä¸ªé‚»æ¥ç‚¹çš„ä¸‹æ ‡æ¥å–å¾—ä¸‹ä¸€ä¸ªé‚»æ¥ç‚¹
+	 * @param v è¡¨ç¤ºè¦æ‰¾çš„é¡¶ç‚¹
+	 * @param index è¡¨ç¤ºè¯¥é¡¶ç‚¹å¯¹äºå“ªä¸ªé‚»æ¥ç‚¹å»è·å–ä¸‹ä¸€ä¸ªé‚»æ¥ç‚¹
 	 * @return
 	 */
 	public int getNextNeighbor(int v, int index) {
@@ -99,23 +98,23 @@ public class Graph {
 		int w = getFirstNeighbor(i);
 		while(w != -1) {
 			if(!isVisited[w]) {
-				// ĞèÒª±éÀú¸Ã¶¥µã
-				System.out.println("·ÃÎÊµ½ÁË£º" + w + "¶¥µã£¡");
+				// éœ€è¦éå†è¯¥é¡¶ç‚¹
+				System.out.println("è®¿é—®åˆ°äº†ï¼š" + w + "é¡¶ç‚¹ï¼");
 				depthFirstSearch(w);
 			}
-			// µÚÒ»¸öÏà¶ÔÓÚwµÄÁÚ½Óµã
+			// ç¬¬ä¸€ä¸ªç›¸å¯¹äºwçš„é‚»æ¥ç‚¹
 			w = getNextNeighbor(i, w);
 		}
 	}
 	
 	/**
-	 * ¶ÔÍâ¹«¿ªµÄÉî¶ÈÓÅÏÈ±éÀú
+	 * å¯¹å¤–å…¬å¼€çš„æ·±åº¦ä¼˜å…ˆéå†
 	 */
 	public void depthFirstSearch() {
 		isVisited = new boolean[vertexSize];
 		for(int i = 0; i < vertexSize; i++) {
 			if(!isVisited[i]) {
-				System.out.println("·ÃÎÊµ½ÁË£º"+ i + "¶¥µã£¡");
+				System.out.println("è®¿é—®åˆ°äº†ï¼š"+ i + "é¡¶ç‚¹ï¼");
 				depthFirstSearch(i);
 			}
 		}
@@ -132,21 +131,21 @@ public class Graph {
 	}
 	
 	/**
-	 * ¹ã¶ÈÓÅÏÈ±éÀú
+	 * å¹¿åº¦ä¼˜å…ˆéå†
 	 * @param i
 	 */
 	private void broadFirstSearch(int i) {
 		int u,w;
 		LinkedList<Integer> queue = new LinkedList<Integer>();
-		System.out.println("·ÃÎÊµ½ÁË£º" + i + "¶¥µã£¡");
+		System.out.println("è®¿é—®åˆ°äº†ï¼š" + i + "é¡¶ç‚¹ï¼");
 		isVisited[i] = true;
-		queue.add(i); // µÚÒ»´Î°Ñv0¼Óµ½¶ÓÁĞ
+		queue.add(i); // ç¬¬ä¸€æ¬¡æŠŠv0åŠ åˆ°é˜Ÿåˆ—
 		while(!queue.isEmpty()) {
 			u = (Integer)(queue.removeFirst()).intValue();
 			w = getFirstNeighbor(u);
 			while(w != -1) {
 				if(!isVisited[w]) {
-					System.out.println("·ÃÎÊµ½ÁË£º" + w + "¶¥µã£¡");
+					System.out.println("è®¿é—®åˆ°äº†ï¼š" + w + "é¡¶ç‚¹ï¼");
 					isVisited[w] = true;
 					queue.add(w);
 				}
@@ -157,22 +156,22 @@ public class Graph {
 	}
 	
 	/**
-	 * prim ÆÕÀïÄ·Ëã·¨
+	 * prim æ™®é‡Œå§†ç®—æ³•
 	 */
 	public void prim() {
-		// ×îĞ¡´ú¼Û¶¥µãÈ¨ÖµµÄÊı×é£¬Îª0±íÊ¾ÒÑ¾­
+		// æœ€å°ä»£ä»·é¡¶ç‚¹æƒå€¼çš„æ•°ç»„ï¼Œä¸º0è¡¨ç¤ºå·²ç»
 		int[] lowcost = new int[vertexSize];
-		// ·Å¶¥µãÈ¨Öµ
+		// æ”¾é¡¶ç‚¹æƒå€¼
 		int[] adjvex = new int[vertexSize];
-		int minWeight; //×îĞ¡È¨Öµ
-		int minId; //×îĞ¡È¨Öµ¶¥µã
-		int sum = 0; //È¨Öµ×ÜºÍ
-		//ÏÈ³õÊ¼»¯½«µÚÒ»ĞĞµÄ¶¥µãÈ¨Öµ´æ·Åµ½ÁÙÊ±È¨ÖµÊı×éÖĞ
+		int minWeight; //æœ€å°æƒå€¼
+		int minId; //æœ€å°æƒå€¼é¡¶ç‚¹
+		int sum = 0; //æƒå€¼æ€»å’Œ
+		//å…ˆåˆå§‹åŒ–å°†ç¬¬ä¸€è¡Œçš„é¡¶ç‚¹æƒå€¼å­˜æ”¾åˆ°ä¸´æ—¶æƒå€¼æ•°ç»„ä¸­
 		for(int i = 1; i < vertexSize; i++) {
 			lowcost[i] = matrix[0][i];
 		}
 		for(int i = 1; i < vertexSize; i++) {
-			//Ã¿´ÎÑ­»·¶¼ÕÒ³öÁÙÊ±¶¥µãÈ¨ÖµµÄ×îĞ¡µÄÈ¨Öµ
+			//æ¯æ¬¡å¾ªç¯éƒ½æ‰¾å‡ºä¸´æ—¶é¡¶ç‚¹æƒå€¼çš„æœ€å°çš„æƒå€¼
 			minWeight = MAX_WEIGHT;
 			minId = 0;
 			for(int j = 1; j < vertexSize; j++) {
@@ -181,12 +180,12 @@ public class Graph {
 					minId = j;
 				}
 			}
-			//ÕÒµ½Ä¿±ê¶¥µãminId,ËûµÄÈ¨ÖµÎªminweight¡£
-			System.out.println("¶¥µã£º" + adjvex[minId] + "È¨Öµ£º" + minWeight);
+			//æ‰¾åˆ°ç›®æ ‡é¡¶ç‚¹minId,ä»–çš„æƒå€¼ä¸ºminweightã€‚
+			System.out.println("é¡¶ç‚¹ï¼š" + adjvex[minId] + "æƒå€¼ï¼š" + minWeight);
 			sum += minWeight;
 			
 			lowcost[minId] = 0;
-			//¸ù¾İÕÒµ½µÄ¶¥µãminId£¬½«ÕâÒ»ĞĞµÄËùÓĞÏà¹ØÁªµÄ¶¥µãÈ¨ÖµÌí¼Óµ½ÁÙÊ±È¨ÖµÊı×éÖĞ
+			//æ ¹æ®æ‰¾åˆ°çš„é¡¶ç‚¹minIdï¼Œå°†è¿™ä¸€è¡Œçš„æ‰€æœ‰ç›¸å…³è”çš„é¡¶ç‚¹æƒå€¼æ·»åŠ åˆ°ä¸´æ—¶æƒå€¼æ•°ç»„ä¸­
 			for(int k = 1; k < vertexSize; k++) {
 				if(lowcost[k] != 0 && matrix[minId][k] < lowcost[k]) {
 					lowcost[k] = matrix[minId][k];
@@ -194,7 +193,7 @@ public class Graph {
 				}
 			}
 		}
-		System.out.println("×îĞ¡Éú³ÉÊ÷È¨ÖµºÍ£º" + sum);
+		System.out.println("æœ€å°ç”Ÿæˆæ ‘æƒå€¼å’Œï¼š" + sum);
 	}
 	
 	public void createGraph() {
@@ -233,8 +232,8 @@ public class Graph {
 		graph.matrix[3] = a3;
 		graph.matrix[4] = a4;*/
 //		int degree = graph.getOutDegree(4);
-//		System.out.println("v0µÄ³ö¶È£º" + degree);
-//		System.out.println("È¨Öµ£º" + graph.getWeight(0, 4));
+//		System.out.println("v0çš„å‡ºåº¦ï¼š" + degree);
+//		System.out.println("æƒå€¼ï¼š" + graph.getWeight(0, 4));
 		
 		Graph graph = new Graph(9);
 		int[] a0 = new int[] {0,10,MAX_WEIGHT,MAX_WEIGHT,MAX_WEIGHT,11,MAX_WEIGHT,MAX_WEIGHT,MAX_WEIGHT};
