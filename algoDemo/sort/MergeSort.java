@@ -1,5 +1,7 @@
 package com.sort;
-
+/**
+* 归并排序：  稳定；非原地排序，时间复杂度 N*logN，空间复杂度 N
+*/
 public class MergeSort {
 
 	public static void main(String[] args) {
@@ -12,11 +14,12 @@ public class MergeSort {
 	}
 	
 	public static void mergeSort(int[] arr, int left, int right) {
+
 		if(left < right) {
-			
+			// 二分位置
 			int mid = (left + right) / 2;
-			mergeSort(arr, left, mid);
-			mergeSort(arr, mid + 1, right);
+			mergeSort(arr, left, mid);    // 递归前半部分排序处理
+			mergeSort(arr, mid + 1, right);    // 递归后半部分排序处理
 			// 合并
 			merge(arr, left, mid, right);
 		}
@@ -29,7 +32,7 @@ public class MergeSort {
 		int temp = left;
 		int third = left;
 		while(left <= mid && rightStart <= right) {
-			if(arr[left] <= arr[rightStart]) {
+			if(arr[left] <= arr[rightStart]) {  // 拿前半部分每个元素与后半部分某元素比较
 				tempArr[third++] = arr[left++];
 			}else {
 				tempArr[third++] = arr[rightStart++];
