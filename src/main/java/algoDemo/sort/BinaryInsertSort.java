@@ -32,7 +32,7 @@ public class BinaryInsertSort {
 				}
 			}
 			for(int j = i - 1; j >= left; j--) {
-				// 比left右边大的值，往后移一位，等待temp插入
+				// 比left右边大的所有元素，全部往后移一位，等待temp插入
 				a[j+1] = a[j];
 			}
 			if(left != i) {
