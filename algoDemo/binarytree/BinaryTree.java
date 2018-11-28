@@ -133,7 +133,7 @@ public class BinaryTree {
          while(pCur == null && !stack.isEmpty()){
                pCur = stack.peek();
                outNode = stack.pop();
-               q.add((String) node.getData());//
+               q.add((String) outNode.getData());//
 //               System.out.println(outNode.getData());
                pCur = pCur.rightChild;
          }
