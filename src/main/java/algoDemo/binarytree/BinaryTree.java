@@ -64,30 +64,6 @@ public class BinaryTree {
 			return 1 + getSize(node.leftChild) + getSize(node.rightChild);
 		}
 	}
-	/**
-	 * 前序遍历：非迭代
-	 */
-	public void nonRecPreOrder(TreeNode node) {
-		if(node == null) {
-			return;
-		}
-		Stack<TreeNode> stack = new Stack<TreeNode>();
-		stack.push(node);
-		while(!stack.isEmpty()) {
-			// 出栈和进栈
-			// 1. 弹出根结点
-			TreeNode outNode = stack.pop();
-			System.out.println("nonRecPreOrder data: " + outNode.getData());
-			// 2. 压入子结点
-			if(outNode.rightChild != null) {
-				stack.push(outNode.rightChild);
-			}
-			if(outNode.leftChild != null) {
-				stack.push(outNode.leftChild);
-			}
-		}
-	}
-	
 	
 	/**
 	 * 前序遍历：迭代
@@ -116,33 +92,6 @@ public class BinaryTree {
 	}
 	
 	/**
-	 * 中序遍历：非迭代
-	 */
-	public void nonRecMidOrder(TreeNode node) {
-		if(node == null) {
-			return;
-		}
-		Stack<TreeNode> stack = new Stack<TreeNode>();
-		// 
-        Queue<String> q = new LinkedList<String>();
-        TreeNode pCur = node;
-        TreeNode outNode = null;
-     while(!stack.isEmpty()){
-         stack.push(pCur);
-         pCur=pCur.leftChild;
-         while(pCur == null && !stack.isEmpty()){
-               pCur = stack.peek();
-               outNode = stack.pop();
-               q.add((String) node.getData());//
-//               System.out.println(outNode.getData());
-               pCur = pCur.rightChild;
-         }
-     }
-     for(String i : q)
-         System.out.print(i+" ");
-	}
-	
-	/**
 	 * 后序遍历：迭代
 	 */
 	public void postOrder(TreeNode node) {
@@ -155,31 +104,65 @@ public class BinaryTree {
 		}
 	}
 	
-	/**
-	 * 后序遍历：非迭代
-	 */
-	public void nonRecPostOrder(TreeNode root){  
-		Stack<TreeNode> stack = new Stack<TreeNode>();  
-        Stack<TreeNode> output = new Stack<TreeNode>();//按出栈顺序将元素装入此栈中
-        TreeNode node = root;  
-        while(node != null || stack.size()>0){  
-            if(node != null){  
-                output.push(node);  
-                stack.push(node);
-                // 右孩子
-                node = node.rightChild;  
-            }else{  
-                node = stack.pop(); 
-                // 左孩子
-                node = node.leftChild;  
-            }  
-        }  
-          
+	
+	// 前序  非递归
+    public void preOrderTraversal(TreeNode root){
+
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode node = root;
+        while (node != null || stack.size() > 0){
+            // 将所有左孩子压栈
+            if (node != null){
+                printTreeNode(node);    // 访问
+                stack.push(node);    // 压栈
+                node = node.left;
+            } else {
+                node = stack.pop();    // 出栈
+                node = node.right;
+            }
+        }
+    }
+
+    // 中序  非递归
+    public void inOrderTraversal(TreeNode root){
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode node = root;
+        while (node != null || stack.size() > 0){
+            if (node != null){
+                stack.push(node);  // 压栈
+                node = node.left;
+            } else {
+                node = stack.pop();  // 出栈
+                printTreeNode(node);  // 访问
+                node = node.right;
+            }
+        }
+    }
+
+    // 后序  非递归
+    public void nonRecPostOrder(TreeNode root){
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        Stack<TreeNode> output = new Stack<TreeNode>();  //按出栈顺序将元素装入此栈中
+        TreeNode node = root;
+        while(node != null || stack.size()>0){
+            if(node != null){
+                output.push(node);
+                stack.push(node);    // 压栈
+                node = node.right;
+            }else{
+                node = stack.pop();  // 出栈
+                node = node.left;
+            }
+        }
+
+        // 访问
         while(output.size()>0){
-        	TreeNode out = output.pop();
-        	System.out.print(out.getData());
-        }  
-    }  
+            TreeNode out = output.pop();
+            System.out.print(out.val + " ");
+        }
+    }
+	
+	
 	
 	/**
 	 * ͨ构建二叉树
