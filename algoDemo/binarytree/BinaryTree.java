@@ -124,19 +124,19 @@ public class BinaryTree {
 		}
 		Stack<TreeNode> stack = new Stack<TreeNode>();
 		// 
-        Queue<String> q = new LinkedList<String>();
-        TreeNode pCur = node;
-        TreeNode outNode = null;
-     while(!stack.isEmpty()){
-         stack.push(pCur);
-         pCur=pCur.leftChild;
-         while(pCur == null && !stack.isEmpty()){
-               pCur = stack.peek();
-               outNode = stack.pop();
-               q.add((String) outNode.getData());//
-//               System.out.println(outNode.getData());
-               pCur = pCur.rightChild;
-         }
+		Queue<String> q = new LinkedList<String>();
+		TreeNode pCur = node;
+		TreeNode outNode = null;
+	        while(pCur != null){
+		 stack.push(pCur);
+		 pCur=pCur.leftChild;
+		 while(pCur == null && !stack.isEmpty()){
+		       pCur = stack.peek();
+		       outNode = stack.pop();
+		       q.add((String) outNode.getData());//
+	//               System.out.println(outNode.getData());
+		       pCur = pCur.rightChild;
+		 }
      }
      for(String i : q)
          System.out.print(i+" ");
