@@ -3,6 +3,9 @@ package designPattern.visitor;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * javac编译过程中，JCCompilationUnit相当于结构对象，持有整个语法树
+ */
 public class ObjectStructure {
     private List<Person> list = new ArrayList<Person>();
 

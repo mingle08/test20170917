@@ -1,5 +1,8 @@
 package designPattern.visitor;
 
+/**
+ * javac编译过程中，JavacCompiler相当于client
+ */
 public class client {
     public static void main(String[] args){
         ObjectStructure obj = new ObjectStructure();
