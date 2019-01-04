@@ -146,8 +146,10 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
     private Node deleteMin(Node h) {
         if (h.left == null)
             return null;
+
         if (!isRed(h.left) && !isRed(h.left.left))
             h = moveRedLeft(h);
+            
         h.left = deleteMin(h.left);
         return balance(h);
     }
