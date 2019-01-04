@@ -149,7 +149,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
 
         if (!isRed(h.left) && !isRed(h.left.left))
             h = moveRedLeft(h);
-            
+
         h.left = deleteMin(h.left);
         return balance(h);
     }
@@ -169,11 +169,15 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
     private Node deleteMax(Node h) {
         if (isRed(h.left))
             h = rotateRight(h);
+
         if (h.right == null)
             return null;
+
         if (!isRed(h.right) && !isRed(h.right.left))
             h = moveRedRight(h);
+
         h.right = deleteMax(h.right);
+        
         return balance(h);
     }
 
