@@ -114,7 +114,7 @@ public class BinaryTree {
             // 将所有左孩子压栈
             if (node != null){
                 printTreeNode(node);    // 访问
-                stack.push(node);    // 压栈
+                stack.push(node);    // 压栈                                                       
                 node = node.left;
             } else {
                 node = stack.pop();    // 出栈
