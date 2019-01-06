@@ -67,6 +67,13 @@ public class ArrayQuick {
 	
 	/**
 	 * 三项数据取中间
+	 * 也就是取左端、中间、右端三个数，然后进行排序，将中间数作为枢纽值。
+	 * index                 0 1 2 3 4 5 6 7
+	 * 原始arr                4 5 7 8 1 2 3 6
+	 * 排序左、中、右端         |     |       |
+	 *                       4 5 7 6 1 2 3 8
+	 * 将中间值6 放到right-1位置，因为4 < 6 < 8，6不可能放在8的位置
+	 * 数组变为：             4 5 7 3 1 2 6 8
 	 * @param left
 	 * @param right
 	 * @return
@@ -82,7 +89,7 @@ public class ArrayQuick {
 		if(arr[center] > arr[right]) {
 			swap(center, right);
 		}
-		swap(center, right - 1);
+		swap(center, right - 1); // 将枢纽值放在right-1位置
 		return arr[right - 1];
 	}
 	
