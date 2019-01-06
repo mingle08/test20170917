@@ -145,6 +145,11 @@ public class ArrayQuick {
 				swap(leftPtr, rightPtr);    // 交换
 			}
 		}
+
+		/*
+		 此时leftPtr与rightPtr重合，在pivot（在right-1位置）前面right-2位置上，因为此位置的数 > pivot
+		 所以要交换
+		  */
 		swap(leftPtr, right - 1);   
 		return leftPtr;
 	}
