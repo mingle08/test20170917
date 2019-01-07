@@ -130,12 +130,12 @@ public class ArrayQuick {
 		int leftPtr = left;
 		int rightPtr = right - 1;
 		while(true) {
-			// 从左向右找大于特定值的数据项
+			// 从第二位向右找大于特定值的数据项
 			while(arr[++leftPtr] < pivot);
 			// 如果跳出循环，就表示找到了一个大于特定值的数据项
 			
 			
-			// 从右往左边，找小于特定值的数据项：跳出循环，表示找到了。
+			// 从倒数第二位往左边，找小于特定值的数据项：跳出循环，表示找到了。
 			while(arr[--rightPtr] > pivot);
 			// 如果跳出循环，就表示找到了一个小于特定值的数据项
 			
@@ -147,8 +147,7 @@ public class ArrayQuick {
 		}
 
 		/*
-		 此时leftPtr与rightPtr重合，在pivot（在right-1位置）前面right-2位置上，因为此位置的数 > pivot
-		 所以要交换
+		 此时 i >= j，将其中一个大于pivot的值与pivot交换位置
 		  */
 		swap(leftPtr, right - 1);   
 		return leftPtr;
