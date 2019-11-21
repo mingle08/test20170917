@@ -1,1 +1,71 @@
-<mxfile host="www.draw.io" modified="2019-11-21T07:31:40.616Z" agent="Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36" etag="K_LO1uIb9rc865DxLjmC" version="12.2.7" type="github" pages="1"><diagram id="yVZKnhVkiBn1K1kPAC6C" name="Page-1">tZRRU6QwDMc/DY/n7FJFfHVdvZnz5sZZHfWxS7PQu0K4bhDw01uWsMCgq87oC9P8mqbJPw2eWKTVlZV58hsVGM+fqcoTF57vh0Hovg2oW3AczlsQW61aNAAr/QwMZ0wLrWA7ciREQzofwwizDCIaMWktlmO3DZrxrbmMYQJWkTRTeq8VJVyWf9rzn6DjpLt5Hpy1O6nsnLmSbSIVlgMklp5YWERqV2m1ANNo1+nSnrt8Y3efmIWMPnLgdnV5c1v4i5ON2aj0/2nwcPfrh+DcqO4KBuXqZxMtJRhjJs2yp+cWi0xBE3XmrN7nGjF3cO7gXyCquZmyIHQoodTwLlSaHgbrxybU0QlbFxVH3hk1G22eTXJvls9oi4WN4EDN3TOSNgY64Ofvm+QeN2AKZGt3zoKRpJ/GeUh+ZvHer++EW3AzPtEYjvskTcE3TTrV96ERskw0wSqXu9JLN4tjzTkcWILqsILTirsD3UzyKIsztst+MObda08GQxHMvkkk/32R3NTlzTKqjXZq2feVWreyXq/3QEb/4p3YfwpyUeDrJBWhGEsaTiUNXlE0/Lyizuz/Nbu9wQ9bLF8A</diagram></mxfile>
+<mxfile host="www.draw.io" modified="2019-11-21T07:45:40.056Z" agent="Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36" etag="KiPGvQC8Nyy0w5_HrWIy" version="12.2.7" type="github" pages="1">
+  <diagram id="yVZKnhVkiBn1K1kPAC6C" name="Page-1">
+    <mxGraphModel dx="868" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="TSFQTu2C5flfdmq76XUK-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="TSFQTu2C5flfdmq76XUK-1" target="TSFQTu2C5flfdmq76XUK-2" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="TSFQTu2C5flfdmq76XUK-1" value="&lt;span style=&quot;color: rgb(50 , 50 , 50) ; font-size: 13px ; white-space: normal ; background-color: rgba(255 , 255 , 255 , 0.01)&quot;&gt;PaymentNoticeListenerService&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9999FF;" parent="1" vertex="1">
+          <mxGeometry x="30" y="390" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="TSFQTu2C5flfdmq76XUK-2" target="uNKmvXRHpMy-gQjEQdh7-1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="TSFQTu2C5flfdmq76XUK-2" value="TM_PAYMENT_NOTICE" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#99FFFF;" parent="1" vertex="1">
+          <mxGeometry x="293" y="385" width="167" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="uNKmvXRHpMy-gQjEQdh7-1" target="uNKmvXRHpMy-gQjEQdh7-3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-7" value="否" style="text;html=1;resizable=0;points=[];align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="uNKmvXRHpMy-gQjEQdh7-4">
+          <mxGeometry x="0.2444" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-6" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uNKmvXRHpMy-gQjEQdh7-1" target="uNKmvXRHpMy-gQjEQdh7-5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-1" value="批量正在运行" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="380" width="130" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uNKmvXRHpMy-gQjEQdh7-3" target="TSFQTu2C5flfdmq76XUK-2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uNKmvXRHpMy-gQjEQdh7-3" target="uNKmvXRHpMy-gQjEQdh7-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="560" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-3" value="更新tmPaymentNotice&lt;br&gt;更新tmAccount" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="790" y="390" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uNKmvXRHpMy-gQjEQdh7-5" target="uNKmvXRHpMy-gQjEQdh7-9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-5" value="不处理" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="575" y="524" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-9" value="息费减免" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="575" y="660" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="uNKmvXRHpMy-gQjEQdh7-12" target="uNKmvXRHpMy-gQjEQdh7-9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-12" value="TM_ACCOUNT" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#99FFFF;" vertex="1" parent="1">
+          <mxGeometry x="775" y="655" width="170" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="uNKmvXRHpMy-gQjEQdh7-14" target="uNKmvXRHpMy-gQjEQdh7-12">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="uNKmvXRHpMy-gQjEQdh7-14" target="TSFQTu2C5flfdmq76XUK-2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uNKmvXRHpMy-gQjEQdh7-14" value="&lt;span style=&quot;color: rgb(50 , 50 , 50) ; font-size: 13px ; white-space: normal ; background-color: rgba(255 , 255 , 255 , 0.01)&quot;&gt;定时器&lt;/span&gt;&lt;div style=&quot;resize: none ; outline: 0px ; font-size: 13px ; color: rgb(50 , 50 , 50) ; white-space: normal&quot;&gt;PaymentNoticeResultService&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9999FF;" vertex="1" parent="1">
+          <mxGeometry x="280" y="770" width="193" height="60" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
